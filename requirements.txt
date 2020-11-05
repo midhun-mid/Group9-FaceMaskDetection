@@ -3,4 +3,6 @@ keras==2.3.1
 imutils==0.5.3 <br />
 numpy==1.16.6  <br />
 opencv-python==4.2.0.*
+matplotlib==2.2.5
+scipy==1.2.3
 
