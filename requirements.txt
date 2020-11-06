@@ -1,7 +1,7 @@
 tensorflow>=1.15.2
 keras==2.3.1
-imutils==0.5.3 <br />
-numpy==1.16.6  <br />
+imutils==0.5.3 
+numpy==1.16.6  
 opencv-python==4.2.0.*
 matplotlib==2.2.5
 scipy==1.2.3
