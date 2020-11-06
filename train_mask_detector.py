@@ -27,5 +27,5 @@ INIT_LR = 1e-4
 EPOCHS = 20
 BS = 32
 
-DIRECTORY = ""
+DIRECTORY = "#Add directory path of dataset upon completion"
 CATEGORIES = ["with_mask", "without_mask", "improper_mask"]
