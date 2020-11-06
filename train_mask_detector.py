@@ -27,5 +27,5 @@ INIT_LR = 1e-4
 EPOCHS = 20
 BS = 32
 
-DIRECTORY = "/media/midhun/00D27F9AD27F9320/project/Face-Mask-Detection-1-master/dataset"
-CATEGORIES = ["with_mask", "without_mask"]
+DIRECTORY = ""
+CATEGORIES = ["with_mask", "without_mask", "improper_mask"]
