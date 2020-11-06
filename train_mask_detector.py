@@ -40,10 +40,10 @@ labels = []
 for category in CATEGORIES:
     path = os.path.join(DIRECTORY, category)
     for img in os.listdir(path):
-    img_path = os.path.join(path, img)
-    image = load_img(img_path, target_size=(224, 224))
-    image = img_to_array(image)
-    image = preprocess_input(image)
+        img_path = os.path.join(path, img)
+        image = load_img(img_path, target_size=(224, 224))
+        image = img_to_array(image)
+        image = preprocess_input(image)
 
-    data.append(image)
-    labels.append(category)
+        data.append(image)
+        labels.append(category)
