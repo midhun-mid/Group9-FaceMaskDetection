@@ -28,7 +28,7 @@ EPOCHS = 20
 BS = 32
 
 DIRECTORY = "" #*****Add directory path of dataset upon completion and mention the path in documentation/README.mk file****
-CATEGORIES = ["with_mask", "without_mask", "improper_mask"]
+CATEGORIES = ["with_mask", "without_mask"]
 
 # grab the list of images in our dataset directory, then initialize
 # the list of data (i.e., images) and class images
@@ -43,6 +43,7 @@ for category in CATEGORIES:
         img_path = os.path.join(path, img)
         image = load_img(img_path, target_size=(224, 224))
         image = img_to_array(image)
-        image = preprocess_input(image
+        image = preprocess_input(image)
+
         data.append(image)
         labels.append(category)
