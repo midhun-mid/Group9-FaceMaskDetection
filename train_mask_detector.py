@@ -46,3 +46,14 @@ for category in CATEGORIES:
         image = preprocess_input(image)
         data.append(image)
         labels.append(category)
+        
+# perform one-hot encoding on the labels
+lb = LabelBinarizer()
+labels = lb.fit_transform(labels)
+labels = to_categorical(labels)
+
+data = np.array(data, dtype="float32")
+labels = np.array(labels)
+
+(trainX, testX, trainY, testY) = train_test_split(data, labels,
+test_size=0.20, stratify=labels, random_state=42)      
