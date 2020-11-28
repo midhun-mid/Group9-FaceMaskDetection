@@ -105,3 +105,12 @@ steps_per_epoch=len(trainX) // BS,
 validation_data=(testX, testY),
 validation_steps=len(testX) // BS,
 epochs=EPOCHS)
+
+
+# make predictions on the testing set
+print("[INFO] evaluating network...")
+predIdxs = model.predict(testX, batch_size=BS)
+
+# for each image in the testing set we need to find the index of the
+# label with corresponding largest predicted probability
+predIdxs = np.argmax(predIdxs, axis=1)
