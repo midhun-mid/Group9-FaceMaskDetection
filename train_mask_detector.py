@@ -90,3 +90,9 @@ model = Model(inputs=baseModel.input, outputs=headModel)
 # *not* be updated during the first training process
 for layer in baseModel.layers:
     layer.trainable = False
+    
+# compile our model
+print("[INFO] compiling model...")
+opt = Adam(lr=INIT_LR, decay=INIT_LR / EPOCHS)
+model.compile(loss="binary_crossentropy", optimizer=opt,
+metrics=["accuracy"])
