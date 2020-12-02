@@ -13,3 +13,10 @@ import os
 prototxtPath = ""
 weightsPath = r"face_detector/res10_300x300_ssd_iter_140000.caffemodel"
 faceNet = cv2.dnn.readNet(prototxtPath, weightsPath)
+
+# load the face mask detector model from disk
+maskNet = load_model("mask_detector.model")
+
+# initialize the video stream
+print("[INFO] starting video stream...")
+vs = VideoStream(src=0).start()
