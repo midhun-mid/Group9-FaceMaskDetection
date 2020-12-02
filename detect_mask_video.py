@@ -9,3 +9,7 @@ import time
 import cv2
 import os
 
+# load our serialized face detector model from disk
+prototxtPath = ""
+weightsPath = r"face_detector/res10_300x300_ssd_iter_140000.caffemodel"
+faceNet = cv2.dnn.readNet(prototxtPath, weightsPath)
