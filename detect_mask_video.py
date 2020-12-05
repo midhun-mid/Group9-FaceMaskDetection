@@ -111,4 +111,9 @@ def detect_and_predict_mask(frame, faceNet, maskNet):
 	    face = img_to_array(face)
 	    face = preprocess_input(face)
 	
+	    # add the face and bounding boxes to their respective
+	    # lists
+	    faces.append(face)
+	    locs.append((startX, startY, endX, endY))
+	
 	
