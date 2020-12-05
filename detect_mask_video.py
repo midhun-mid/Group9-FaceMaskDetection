@@ -123,4 +123,7 @@ def detect_and_predict_mask(frame, faceNet, maskNet):
                 # in the above `for` loop
                 faces = np.array(faces, dtype="float32")
                 preds = maskNet.predict(faces, batch_size=32)
-
+            
+	    # return a 2-tuple of the face locations and their corresponding
+	    # locations
+	    return (locs, preds)
