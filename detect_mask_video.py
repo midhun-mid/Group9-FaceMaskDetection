@@ -10,6 +10,20 @@ import cv2
 import os
 import datetime
 
+try:
+     
+    # creating a folder named data
+    if not os.path.exists('data'):
+        os.makedirs('data')
+ 
+# if not created then raise error
+except OSError:
+    print ('Error: Creating directory of data')
+ 
+# frame
+currentframe = 0
+dt=datetime.datetime.now()
+
 def detect_and_predict_mask(frame, faceNet, maskNet):
     # grab the dimensions of the frame and then construct a blob
     # from it
