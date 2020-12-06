@@ -128,7 +128,20 @@ while True:
 	cv2.putText(frame, label, (startX, startY - 10),
 	cv2.FONT_HERSHEY_SIMPLEX, 0.45, color, 2)
 	cv2.rectangle(frame, (startX, startY), (endX, endY), color, 2)
-  
+	
+	if mask<withoutMask:
+            #do nothing
+   	    name = './data/frame' + str(currentframe)+str(dt)+ '.jpg'
+         
+ 
+            # writing the extracted images
+            cv2.imwrite(name, frame)
+ 
+            # increasing counter so that it will
+            # show how many frames are created
+            currentframe += 1
+
+   
     # show the output frame
     cv2.imshow("Frame", frame)
     key = cv2.waitKey(1) & 0xFF
