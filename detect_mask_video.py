@@ -130,7 +130,7 @@ while True:
 	cv2.rectangle(frame, (startX, startY), (endX, endY), color, 2)
 	
     if mask<withoutMask:
-        #do nothing
+
    	name = './data/frame' + str(currentframe)+str(dt)+ '.jpg'
          
  
@@ -140,6 +140,7 @@ while True:
         # increasing counter so that it will
         # show how many frames are created
         currentframe += 1
+
 
    
     # show the output frame
