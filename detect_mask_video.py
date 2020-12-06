@@ -130,16 +130,17 @@ while True:
 	cv2.rectangle(frame, (startX, startY), (endX, endY), color, 2)
 	
     if mask<withoutMask:
-         #do nothing
-   	 name = './data/frame' + str(currentframe)+str(dt)+ '.jpg'
+
+   	name = './data/frame' + str(currentframe)+str(dt)+ '.jpg'
          
  
-         # writing the extracted images
-         cv2.imwrite(name, frame)
+        # writing the extracted images
+        cv2.imwrite(name, frame)
  
-         # increasing counter so that it will
-         # show how many frames are created
-         currentframe += 1
+        # increasing counter so that it will
+        # show how many frames are created
+        currentframe += 1
+
 
    
     # show the output frame
